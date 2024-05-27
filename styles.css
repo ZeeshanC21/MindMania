@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-weight: 100;
+    background: radial-gradient(#F1E5D1, #987070);
+    overflow-y: auto;
+    animation: fadeIn 1s ease-out;
+}
+
+div {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#level-title {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 120px;
+    margin: 5%;
+    color: #3e0721;
+}
+
+/* Wrapper to center containers */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container styling */
+.container1,
+.container2 {
+    display: grid;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Default layout for larger screens */
+@media (min-width: 1025px) {
+    .container1,
+    .container2 {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div0 {
+        height: 300px;
+        width: 300px;
+        color: #3e0721;
+    }
+}
+
+/* Medium screens (tablets, etc.) */
+@media (max-width: 1024px) {
+    .container1,
+    .container2 {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div0 {
+        height: 250px;
+        width: 250px;
+        color: #3e0721;
+    }
+}
+
+/* Small screens (phones, etc.) */
+@media (max-width: 768px) {
+    .container1,
+    .container2 {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div0 {
+        height: 200px;
+        width: 200px;
+        color: #3e0721;
+    }
+}
+
+/* Extra small screens (small phones, etc.) */
+@media (max-width: 480px) {
+    .container1,
+    .container2 {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .div1,
+    .div2,
+    .div3,
+    .div4,
+    .div5,
+    .div0 {
+        height: 100px;
+        width: 100px;
+        color: #3e0721;
+    }
+}
+
+.div0,.div1,.div2,.div3,.div4,.div5{
+    box-shadow: 10px 10px 5px;
+    border-radius: 30%;
+}
+
+input {
+    background-color: antiquewhite;
+    height: 150px;
+    width: 150px;
+    font-size: 32px;
+    border-radius: 30%;
+}
+
+/* Div background colors */
+.div0 {
+    background-color: #c56477;
+}
+
+.div1 {
+    background-color: #6886af;
+}
+
+.div2 {
+    background-color: #d4c3ca;
+}
+
+.div3 {
+    background-color: #ab94b0;
+}
+
+.div4 {
+    background-color: #116594;
+}
+
+.div5 {
+    background-color: #242d62;
+}
+
+/* center for different sizes and add more CSS to divs and others */
+
+.div-text {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+}
+
+.round-success {
+    background-color: green;
+    opacity: 0.8;
+}
+
+.x1 {
+    animation: floatUp 4s infinite linear;
+    transform: scale(1.0);
+}
+
+.x2 {
+    animation: floatUp 7s infinite linear;
+    transform: scale(1.6);
+    left: 15%;
+}
+
+.x3 {
+    animation: floatUp 2.5s infinite linear;
+    transform: scale(.5);
+    left: -15%;
+}
+
+.x4 {
+    animation: floatUp 4.5s infinite linear;
+    transform: scale(1.2);
+    left: -34%;
+}
+
+.x5 {
+    animation: floatUp 8s infinite linear;
+    transform: scale(2.2);
+    left: -57%;
+}
+
+.x6 {
+    animation: floatUp 3s infinite linear;
+    transform: scale(.8);
+    left: -81%;
+}
+
+.x7 {
+    animation: floatUp 5.3s infinite linear;
+    transform: scale(3.2);
+    left: 37%;
+}
+
+.x8 {
+    animation: floatUp 4.7s infinite linear;
+    transform: scale(1.7);
+    left: 62%;
+}
+
+.x9 {
+    animation: floatUp 4.1s infinite linear;
+    transform: scale(0.9);
+    left: 85%;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 100vh;
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        top: 0vh;
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        top: -100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* .light {
+    position: absolute;
+    width: 0px;
+    background-color: white;
+    box-shadow: #e9f1f1 0px 0px 20px 2px;
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    opacity: 0.75;
+} */
